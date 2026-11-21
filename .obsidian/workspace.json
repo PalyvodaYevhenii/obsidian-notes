@@ -1,0 +1,282 @@
+{
+  "main": {
+    "id": "726f788490c73949",
+    "type": "split",
+    "children": [
+      {
+        "id": "23799351560ce780",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3ebb1227da12fccc",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Нова вкладка"
+            }
+          },
+          {
+            "id": "eebeb4a810e806c2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Learning plan (High-Performance Java Persistence).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Learning plan (High-Performance Java Persistence)"
+            }
+          },
+          {
+            "id": "16d296180a9e1cc2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Java Learning/Java Core/Java Performance.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Java Performance"
+            }
+          },
+          {
+            "id": "40c0eca087c42ed9",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "Без назви 1.base",
+                "viewName": "Подання"
+              },
+              "icon": "lucide-table",
+              "title": "Без назви 1"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5cce9a3b63eb364b",
+    "type": "split",
+    "children": [
+      {
+        "id": "f57ad990c1d70e0e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d7c6e514895881c9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Файловий менеджер"
+            }
+          },
+          {
+            "id": "80b360701d17a992",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Пошук"
+            }
+          },
+          {
+            "id": "9362ca5c51f153b2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Закладки"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "5fdf0f68633f1f9f",
+    "type": "split",
+    "children": [
+      {
+        "id": "bab748a4930fc6eb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eb3ccce49b7e4193",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Spring/Spring Boot.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Зворотні посилання"
+            }
+          },
+          {
+            "id": "fe8a2f0efa26dfd4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Learning plan (High-Performance Java Persistence).md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Вихідні посилання"
+            }
+          },
+          {
+            "id": "484393cf9dfb5f11",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Мітки"
+            }
+          },
+          {
+            "id": "8571db1cc35efa73",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Всі властивості"
+            }
+          },
+          {
+            "id": "bc7f207a43e9c647",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Learning plan (High-Performance Java Persistence).md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Вміст"
+            }
+          },
+          {
+            "id": "0e8e36bc22061b81",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Відкрити провідник файлів": false,
+      "graph:Граф": false,
+      "canvas:Створити нове полотно": false,
+      "daily-notes:Сьогоднішня нотатка": false,
+      "templates:Вставити шаблон": false,
+      "command-palette:Відкрити меню команд": false,
+      "bases:Створити нову базу": false,
+      "obsidian-git:Open Git source control": false,
+      "github-sync:Sync with Remote": false
+    }
+  },
+  "active": "0e8e36bc22061b81",
+  "lastOpenFiles": [
+    "DevOps/Kubernetess/What is Kubernetess.md",
+    "DevOps/Kubernetess/Без назви.md",
+    "Postgres/High performance java persistance/Транзакции/Practice.md",
+    "Learning plan (High-Performance Java Persistence).md",
+    "Postgres/High performance java persistance/Транзакции/Isolation.md",
+    "Postgres/High performance java persistance/Транзакции/Read Only Tansactions.md",
+    "Postgres/High performance java persistance/Транзакции/App level transactions.md",
+    "System Design/System Desing (Udemy)/Design Systems That Scales.md",
+    "System Design/System Design (udemy).md",
+    "System Design/System Desing (Udemy)",
+    "System Design/Design systems that scales.md",
+    "Без назви",
+    "[Postgres/High performance java persistance/Транзакции/Summary.md",
+    "Postgres/High performance java persistance/Summary (High performance Persistance).md",
+    "Java Learning/Java Core/Java Concurrency.md",
+    "Learning Plan.md",
+    "Java Learning/Java Core/Java Performance.md",
+    "Postgres/High performance java persistance/Транзакции/Transactions.md",
+    "Postgres/High performance java persistance/Relations/Relations.md",
+    "[Postgres/High performance java persistance/Транзакции",
+    "[Postgres/High performance java persistance",
+    "[Postgres",
+    "Postgres/High performance java persistance/Relations",
+    "Без назви 1.base",
+    "Без назви.canvas",
+    "Postgres/High performance java persistance/Транзакции/Base.md",
+    "Learning plan (Concurency).md",
+    "Postgres/High performance java persistance/Транзакции/Без назви.canvas",
+    "Postgres/High performance java persistance/Транзакции/Summary.base",
+    "Postgres/High performance java persistance/Транзакции/Consistency.md",
+    "Postgres/High performance java persistance/Транзакции/Atomicity.md",
+    "Postgres/High performance java persistance/Транзакции.md",
+    "Postgres/High performance java persistance/Транзакции/Transaction boundaries.md",
+    "Postgres/High performance java persistance/Транзакции/Durability.md",
+    "Learning Plan (Postgres Inside).md",
+    "Postgres/High performance java persistance/Транзакции",
+    "DevOps/Kubernetess",
+    "Java Learning/Java Core/Java Memmory Model.md"
+  ]
+}

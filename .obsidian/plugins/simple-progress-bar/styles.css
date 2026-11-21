@@ -1,0 +1,316 @@
+/* Container for the minimal progress bar in header */
+.sp-bar-settings-help {
+	box-sizing: border-box;
+	margin: 0 0 20px;
+	padding: 0 0 16px 16px;
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.sp-bar-settings-help-title {
+	display: block;
+	margin: 0 0 6px;
+	font-size: var(--font-ui-large, 20px);
+	font-weight: var(--font-semibold, 600);
+	line-height: var(--line-height-tight, 1.25);
+}
+
+.sp-bar-settings-help-description {
+	max-width: 52em;
+	margin: 0;
+	color: var(--text-muted);
+	font-size: var(--font-ui-small, 13px);
+	line-height: var(--line-height-tight, 1.35);
+}
+
+.sp-bar-settings-code-block {
+	display: block;
+	box-sizing: border-box;
+	min-width: 160px;
+	width: fit-content;
+	max-width: 100%;
+	margin: 8px 0 0;
+	padding: 10px;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-s, 6px);
+	background-color: var(--background-primary-alt);
+	color: var(--text-normal);
+	font-size: var(--font-ui-smaller, 12px);
+	line-height: 1.35;
+	white-space: pre;
+}
+
+.simple-progress-bar-container {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-right: 12px;
+	overflow: visible;
+}
+
+/* Hide the progress bar when not needed */
+.simple-progress-bar-container.is-hidden {
+	display: none;
+}
+
+/* The track (background/unfilled portion) */
+.simple-progress-bar-track {
+	width: clamp(72px, 18vw, 150px);
+	min-width: 72px;
+	height: 6px;
+	background-color: var(--background-modifier-border);
+	border-radius: 3px;
+	overflow: hidden;
+	position: relative;
+}
+
+/* The filled portion - uses theme accent color */
+.simple-progress-bar-fill {
+	height: 100%;
+	background-color: var(--interactive-accent);
+	border-radius: 3px;
+	transition: width 0.3s ease;
+}
+
+/* The text showing percentage */
+.simple-progress-bar-text {
+	font-size: 13px;
+	color: var(--text-muted);
+	white-space: nowrap;
+	font-weight: 500;
+}
+
+/* Embedded progress bar styles */
+.sp-bar-embedded-container {
+	display: block;
+	padding: 8px 0;
+	width: min(100%, 280px);
+	max-width: 100%;
+	margin-left: 5px;
+	overflow: visible;
+}
+
+.sp-bar-embedded-label {
+	font-size: 13px;
+	font-weight: 500;
+	color: var(--text-normal);
+	margin-bottom: 0px;
+}
+
+.sp-bar-embedded-progress {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	min-width: 0;
+	overflow: visible;
+}
+
+.sp-bar-embedded-text {
+	font-size: 13px;
+	color: var(--text-muted);
+	white-space: nowrap;
+	min-width: 80px;
+	text-align: left;
+}
+
+.sp-bar-embedded-track {
+	width: 100%;
+	height: 6px;
+	background-color: var(--background-modifier-border);
+	border-radius: 3px;
+	overflow: hidden;
+	position: relative;
+}
+
+.sp-bar-embedded-fill {
+	height: 100%;
+	background-color: var(--interactive-accent);
+	border-radius: 3px;
+	transition: width 0.3s ease;
+}
+
+.sp-bar-no-tasks {
+	padding: 8px 12px;
+	color: var(--text-muted);
+	font-size: 13px;
+	font-style: italic;
+}
+
+/* Wrapper for progress bar with sparkles */
+.progress-bar-wrapper {
+	position: relative;
+	flex: 1;
+	overflow: visible;
+}
+
+/* Make the wrapper work in different layout contexts */
+.sp-bar-embedded-progress .progress-bar-wrapper {
+	display: flex;
+	overflow: visible;
+}
+
+.simple-progress-bar-container .progress-bar-wrapper {
+	display: inline-block;
+	flex: 0 0 auto;
+	overflow: visible;
+}
+
+/* 100% completion celebration animation */
+.progress-bar-wrapper.celebrating .simple-progress-bar-track,
+.progress-bar-wrapper.celebrating .sp-bar-embedded-track {
+	animation: flash 0.5s ease-out;
+}
+
+/* Container for sparkles - positioned around the track */
+.progress-sparkles {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 0;
+	pointer-events: none;
+	z-index: 10;
+	transform: translateY(-50%);
+}
+
+.progress-sparkles svg {
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	transform: translate(-50%, -50%) scale(0);
+	opacity: 0;
+}
+
+.progress-sparkles svg path {
+	/* Use a gold color that works in both light and dark mode */
+	fill: #fbbf24;
+	filter: drop-shadow(0 0 2px rgba(251, 191, 36, 0.5));
+}
+
+/* Animation for sparkles - only animate when celebrating */
+.progress-bar-wrapper.celebrating .progress-sparkles svg {
+	animation: sparkle 1.2s ease-out both;
+}
+
+@keyframes sparkle {
+	0% {
+		transform: translate(-50%, -50%) scale(0);
+		opacity: 0;
+	}
+	50% {
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(0);
+		opacity: 0;
+	}
+}
+
+@keyframes flash {
+	0%, 100% {
+		filter: brightness(1);
+	}
+	25% {
+		filter: brightness(1.3) drop-shadow(0 0 4px var(--interactive-accent));
+	}
+	50% {
+		filter: brightness(1.5) drop-shadow(0 0 6px var(--interactive-accent));
+	}
+	75% {
+		filter: brightness(1.3) drop-shadow(0 0 4px var(--interactive-accent));
+	}
+}
+
+/* Individual sparkle positions and delays - positioned around the bar */
+.progress-sparkles svg:nth-child(1) {
+	left: 8%;
+	top: 8px;
+	animation-delay: 0.2s;
+}
+
+.progress-sparkles svg:nth-child(2) {
+	left: 40%;
+	top: -5px;
+	animation-delay: 0.3s;
+}
+
+.progress-sparkles svg:nth-child(3) {
+	left: 80%;
+	top: 10px;
+	animation-delay: 0.45s;
+}
+
+.progress-sparkles svg:nth-child(4) {
+	left: 105%;
+	top: -12px;
+	animation-delay: 0.4s;
+}
+
+.progress-sparkles svg:nth-child(5) {
+	left: 135%;
+	top: 10px;
+	animation-delay: 0.8s;
+}
+
+@media (max-width: 480px), (hover: none) and (pointer: coarse) {
+	.simple-progress-bar-container {
+		gap: 4px;
+		margin-right: 6px;
+		max-width: 48vw;
+		min-width: 0;
+	}
+
+	.simple-progress-bar-container .progress-bar-wrapper {
+		min-width: 56px;
+		max-width: 96px;
+	}
+
+	.simple-progress-bar-track {
+		width: clamp(56px, 22vw, 96px);
+		min-width: 56px;
+	}
+
+	.simple-progress-bar-text,
+	.sp-bar-embedded-label,
+	.sp-bar-embedded-text,
+	.sp-bar-no-tasks {
+		font-size: var(--font-ui-smaller, 12px);
+	}
+
+	.sp-bar-embedded-container {
+		width: 100%;
+		margin-left: 0;
+		padding: 6px 0;
+	}
+
+	.sp-bar-embedded-progress {
+		gap: 8px;
+		flex-wrap: wrap;
+	}
+
+	.sp-bar-embedded-progress .progress-bar-wrapper {
+		flex: 1 1 120px;
+	}
+
+	.sp-bar-embedded-text {
+		min-width: auto;
+	}
+
+	.progress-sparkles svg:nth-child(4),
+	.progress-sparkles svg:nth-child(5) {
+		display: none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.simple-progress-bar-fill,
+	.sp-bar-embedded-fill {
+		transition: none;
+	}
+
+	.progress-bar-wrapper.celebrating .simple-progress-bar-track,
+	.progress-bar-wrapper.celebrating .sp-bar-embedded-track,
+	.progress-bar-wrapper.celebrating .progress-sparkles svg {
+		animation: none;
+	}
+}
